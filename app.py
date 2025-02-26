@@ -1,6 +1,5 @@
 import streamlit as st
-import google.generativeai as genai
-import os
+
 
 # Set page configuration
 st.set_page_config(page_title="Universal Converter Hub", layout='centered')
