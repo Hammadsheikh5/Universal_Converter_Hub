@@ -1,4 +1,19 @@
 import streamlit as st
+import google.generativeai as genai
+
+# Set Gemini API Key
+API_KEY = "AIzaSyDGdoDsYnF-khFYnUYVKi1RZbxTU4iM-sc"
+genai.configure(api_key=API_KEY)
+
+def explain_conversion(value, from_unit, to_unit, result):
+    """Call Gemini API to explain the conversion."""
+    prompt = f"""
+    Explain the conversion from {value} {from_unit} to {to_unit}.
+    The result is {result}. Provide a detailed explanation in simple terms.
+    """
+    model = genai.GenerativeModel("gemini-1.5-pro-latest")
+    response = model.generate_content(prompt)
+    return response.text
 
 
 # Set page configuration
@@ -9,7 +24,7 @@ st.title("🌍🔄Universal Converter Hub")
 st.write("A one-stop solution for all your conversion needs! Easily switch between units like length, mass, and temperature or convert currencies with real-time rates. Fast, accurate, and hassle-free—get the right conversions instantly! 🚀")
 
 
-tab1, tab2 = st.tabs(["Unit Converter", "Currency Converter"])
+tab1, tab2, tab3, tab4 = st.tabs(["Unit Converter", "Currency Converter" , "Number System Converter" , "ASCII Converter"])
 
 
 with tab1:
@@ -379,10 +394,28 @@ with tab1:
             unsafe_allow_html=True
         )
 
+        st.divider()
+        # Explanation Button
+        if st.button("Explain Conversion"):
+            explanation = explain_conversion(value, from_unit, to_unit, result)
+            st.markdown("**Conversion Explanation:**")
+            st.write(explanation)
+
+
 with tab2 : 
     st.header("Currency Converter")
     st.subheader("Convert currencies with real-time exchange rates! 🌎💲")
     st.write('"Currency Converter - Coming Soon!" 💱🚀')
+
+with tab3 : 
+    st.header("Number System Converter")
+    st.subheader("Convert between different number systems! 🔢🔄")
+    st.write('"Number System Converter - Coming Soon!" 🚀')
+
+with tab4 : 
+    st.header("ASCII Converter")
+    st.subheader("Convert between ASCII and text! 📝🔄")
+    st.write('"ASCII Converter - Coming Soon!" 🚀')
 
 
 st.divider()

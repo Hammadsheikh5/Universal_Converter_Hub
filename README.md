@@ -1,8 +1,17 @@
 # 🌍 Universal Converter Hub
 
-Universal Converter Hub is a powerful and easy-to-use unit and currency conversion tool. It features two main tabs:
+**Muhammad Hammad**  
+**GIAIC Student ID Number:** 413850  
+**Slot:** Section A (Tuesday Evening)  
+**Growth Mindset Challenge Web App Deployed URL:** [Universal Converter App](https://universalconverterapp.streamlit.app/)
+
+---
+
+Universal Converter Hub is a powerful and easy-to-use unit and currency conversion tool. It features four main tabs:
 - **Unit Converter**: Convert between various units such as length, temperature, mass, energy, pressure, and more.
-- **Currency Converter** (Coming Soon): Convert currencies with real-time exchange rates.
+- **Currency Converter**: Convert currencies with real-time exchange rates.
+- **Number System Converter**: Convert between binary, decimal, hexadecimal, and octal.
+- **ASCII Converter**: Convert text to ASCII codes and vice versa.
 
 ---
 
@@ -48,9 +57,9 @@ Universal Converter Hub is a powerful and easy-to-use unit and currency conversi
 ---
 
 ## 📌 Future Updates
-- 💱 **Currency Converter** with real-time exchange rates  
-- 📈 **Enhanced UI/UX** for better user experience  
-- 🔄 **More unit categories and accurate conversions**  
+- 💱 **Enhanced Currency Converter** with real-time exchange rates  
+- 📈 **Improved UI/UX** for a better user experience  
+- 🔄 **Additional unit categories and conversion enhancements**  
 
 ---
 
@@ -65,4 +74,3 @@ For any inquiries, reach out via **[LinkedIn](https://www.linkedin.com/in/your-p
 ---
 
 © 2025 Universal Converter Hub. All rights reserved.
-
