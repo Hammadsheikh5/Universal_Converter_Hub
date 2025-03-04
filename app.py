@@ -2,7 +2,7 @@ import streamlit as st
 import google.generativeai as genai
 
 # Set Gemini API Key
-API_KEY = "AIzaSyDGdoDsYnF-khFYnUYVKi1RZbxTU4iM-sc"
+API_KEY = st.secrets["GEMINI_API_KEY"]
 genai.configure(api_key=API_KEY)
 
 def explain_conversion(value, from_unit, to_unit, result):
